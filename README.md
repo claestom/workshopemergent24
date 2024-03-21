@@ -7,6 +7,12 @@ In this demo, we will cover following steps:
   3) Create an Azure Kubernetes Cluster
   4) Deploy the containerized application
 
+Tip: create an empty nodepad with the following variables
+
+    Resource group name:
+    Acr name:
+    AKS cluster name:
+
 ## Step 1: Prepare your application for AKS
 
 Download Git: https://git-scm.com/download/win
@@ -57,10 +63,16 @@ Download Git: https://git-scm.com/download/win
 
   1) Build and push the images to your ACR
 
-    az acr build --registry $ACRNAME --image aks-store-demo/product-service:latest ./src/product-service/
-    az acr build --registry $ACRNAME --image aks-store-demo/order-service:latest ./src/order-service/
-    az acr build --registry $ACRNAME --image aks-store-demo/store-front:latest ./src/store-front/
+    az acr build -g <resource group name> --registry <acr name chosen above> --image aks-store-demo/product-service:latest ./src/product-service/
+    az acr build -g <resource group name> --registry <acr name chosen above> --image aks-store-demo/order-service:latest ./src/order-service/
+    az acr build -g <resource group name> --registry <acr name chosen above> --image aks-store-demo/store-front:latest ./src/store-front/
 
+  In case of an error, try the following:
+    
+    az acr build -g <resource group name> --registry <acr name chosen above> --image product-service:latest ./src/product-service/
+    az acr build -g <resource group name> --registry <acr name chosen above> --image order-service:latest ./src/order-service/
+    az acr build -g <resource group name> --registry <acr name chosen above> --image store-front:latest ./src/store-front/
+    
   2) View and list the image in your ACR
 
     az acr repository list --name <acr name set in step 2> --output table
