@@ -61,6 +61,8 @@ Download Git: https://git-scm.com/download/win
 
   2) Create Azure Container Registry instance
 
+az provider register --namespace Microsoft.ContainerRegistry
+
     az acr create --resource-group <take the same name as above> --name <insert name> --sku basic
 
   ### Build and push container images to registry created above
