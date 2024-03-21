@@ -163,6 +163,9 @@ Download Git: https://git-scm.com/download/win
   4) Copy the External IP shown in the column for store-front
   5) Paste the IP into your browser and visit your store page
 
+### Throubleshooting
+
+"Code is not recognized as an internal or external command":https://stackoverflow.com/questions/46638944/code-is-not-recognized-as-an-internal-or-external-command
 
 
     
