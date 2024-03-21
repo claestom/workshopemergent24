@@ -19,6 +19,10 @@ Download Git: https://git-scm.com/download/win
 
 ### Get application code
 
+  Before jumping into tutorial, open the Command Prompt and create a new folder using following command:
+
+    mkdir msftemergentdemo
+
   1) Use git to clone the sample application to your env
      
     git clone https://github.com/Azure-Samples/aks-store-demo.git
