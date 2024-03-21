@@ -68,7 +68,7 @@ Download Git: https://git-scm.com/download/win
   1) Build and push the images to your ACR
 
     az acr build -g <resource group name> --registry <acr name chosen above> --image aks-store-demo/product-service:latest ./src/product-service/
-  -> 
+  ->
     
     az acr build -g <resource group name> --registry <acr name chosen above> --image aks-store-demo/order-service:latest ./src/order-service/
     
@@ -79,7 +79,12 @@ Download Git: https://git-scm.com/download/win
   In case of an error, try the following:
     
     az acr build -g <resource group name> --registry <acr name chosen above> --image product-service:latest ./src/product-service/
+  ->
+    
     az acr build -g <resource group name> --registry <acr name chosen above> --image order-service:latest ./src/order-service/
+
+  ->
+    
     az acr build -g <resource group name> --registry <acr name chosen above> --image store-front:latest ./src/store-front/
     
   2) View and list the image in your ACR
