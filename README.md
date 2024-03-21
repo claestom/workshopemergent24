@@ -9,6 +9,8 @@ In this demo, we will cover following steps:
 
 ## Step 1: Prepare your application for AKS
 
+Download Git: https://git-scm.com/download/win
+
 ### Get application code
 
   1) Use git to clone the sample application to your env
