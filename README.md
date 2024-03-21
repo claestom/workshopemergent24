@@ -23,11 +23,7 @@ Download Git: https://git-scm.com/download/win
 
   3) Review the Docker Compose file
 
-    vim docker-compose-quickstart.yml
-
-  4) To exit:
-
-    :wq
+    code .
 
   5) Press ENTER
 
