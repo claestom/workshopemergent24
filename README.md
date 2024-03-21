@@ -21,11 +21,9 @@ Download Git: https://git-scm.com/download/win
      
     cd aks-store-demo
 
-  3) Review the Docker Compose file
+  3) Review the Docker Compose file (docker-compose-quickstart.yml)
 
     code .
-
-  5) Press ENTER
 
 ### Create container images and run application
 
@@ -109,11 +107,11 @@ Download Git: https://git-scm.com/download/win
 
     az acr list --resource-group <name of the resource group> --query "[].{acrLoginServer:loginServer}" --output table
 
-  2) Use following command to open the manifest file
+  2) Go to the file called: aks-store-quickstart.yaml
 
-    vi aks-store-quickstart.yaml
+    code .
 
-  3) Update the image property for the containers by replacing ghcr.io/azure-samples with your ACR login server name
+  4) Update the image property for the containers by replacing ghcr.io/azure-samples with your ACR login server name
 
     Example:
 
@@ -129,9 +127,7 @@ Download Git: https://git-scm.com/download/win
       image: <acrName>.azurecr.io/aks-store-demo/store-front:latest
     ...
 
-  4) Save and close the file using following command
-
-    :wq
+  4) Save *CTRL + S* and close the file using following command
 
   ### Run the application
 
